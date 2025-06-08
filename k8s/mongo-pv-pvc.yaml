@@ -14,7 +14,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: arnoldmongo-pvc
-  namespace: arnoldmongo-ns
+  namespace: arnoldflask-ns  
 spec:
   accessModes:
     - ReadWriteOnce

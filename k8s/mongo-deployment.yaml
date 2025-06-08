@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongo-deployment
-  namespace: arnoldmongo-ns  
+  namespace: arnoldflask-ns
 spec:
   replicas: 1
   selector:
@@ -35,13 +35,13 @@ spec:
       volumes:
         - name: mongo-storage
           persistentVolumeClaim:
-            claimName: mongo-pvc
+            claimName: arnoldmongo-pvc
 ---
 apiVersion: v1
 kind: Service
 metadata:
   name: mongo-service
-  namespace: arnoldmongo-ns 
+  namespace: arnoldflask-ns
 spec:
   selector:
     app: mongo
